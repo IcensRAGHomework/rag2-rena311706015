@@ -21,8 +21,8 @@ def hw02_2(q2_pdf):
     pdf = loader.load()
     full_text = "\n".join([page.page_content for page in pdf])
     r_splitter = RecursiveCharacterTextSplitter(
-        separators=[r'第 +[一二三四五六七八九十0-9]+ +[章條]'],
-        chunk_size=10,
+        separators=[r'第 +[一二三四五六七八九十0-9/-]+ +[章條]'],
+        chunk_size=30,
         chunk_overlap=0,
         is_separator_regex=True,
     )
